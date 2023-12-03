@@ -9,7 +9,6 @@ class Signup extends CI_Controller {
 
     public function save_credentials_post()
         {
-            $this->load->database();
             $fullname = $this->input->post('fullname');
             $username = $this->input->post('username');
             $pass = $this->input->post('password');

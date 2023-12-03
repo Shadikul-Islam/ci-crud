@@ -62,8 +62,9 @@ button {
             <button type="submit">Sign up</button> 
             <input type="checkbox" checked="checked"> Remember me 
             <button type="button" class="cancelbtn"> Cancel</button> 
-            <a href="<?php echo base_url('Login/index'); ?>"> Login? </a>
-            Forgot <a href="#"> password? </a> 
+            <button type="button" class="cancelbtn" onclick="window.location.href='<?php echo base_url('Login/index'); ?>'">Login</button>
+            <button type="button" class="cancelbtn" onclick="window.location.href='<?php echo base_url('Update_User_Pass/index'); ?>'">Update User Info</button>
+            <button type="button" class="cancelbtn" onclick="window.location.href='<?php echo base_url('Delete_User/index'); ?>'">Delete User</button>
         </div> 
     </form>   
     

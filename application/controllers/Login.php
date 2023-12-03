@@ -10,17 +10,16 @@ class Login extends CI_Controller {
 
     public function user_login_post()
         {
-            $this->load->database();
-            $this->load->model('User');
             $user = $this->input->post('username');
             $pass = $this->input->post('password');
-            $data = array(
-                'username' => $user,
-                'password'=> $pass
-            );
-            $result = $this->User->get_username($user,$pass);
-            print_r ($result);
-            // echo "Credentials saved to the database!";
+            $this->load->model('Users');
+            $result = $this->Users->get_username($user,$pass);
+            // echo $result;
+            if($result == 1){
+                echo "Login Success!";
+            }
+            else
+                echo "Invalid Username or Password";
         }
 
     }
